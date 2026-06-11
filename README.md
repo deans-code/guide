@@ -41,3 +41,16 @@ dotnet run
 
 - API: `http://localhost:5173`
 - Swagger UI: `http://localhost:5173/scalar/v1`
+
+### CQRS — .NET 10 Minimal API
+Demonstrates CQRS with separate read and write models. Commands mutate a normalised write database (`Orders`, `OrderLines`); domain events trigger projection handlers that update a denormalised read database (`OrderSummaries`). Queries never touch the write store. Uses MediatR 12 for command/query dispatch and `INotification` for in-process event propagation.
+
+**Tech:** .NET 10, ASP.NET Core Minimal APIs, MediatR 12, EF Core 10, SQLite (separate write/read databases)
+
+```bash
+cd CQRS
+dotnet run
+```
+
+- API: `http://localhost:5001`
+- Swagger UI: `http://localhost:5001/scalar/v1`
