@@ -28,3 +28,16 @@ dotnet run
 
 - API: `http://localhost:5194`
 - Swagger UI: `http://localhost:5194/scalar/v1`
+
+### Vertical Slice Architecture — .NET 10 Minimal API
+Demonstrates vertical slice architecture using MediatR and FluentValidation. Each feature slice (`Features/Products/*.cs`) is entirely self-contained — request, validator, handler, and endpoint registration all live in one file. `Program.cs` stays thin via reflection-based endpoint discovery. A MediatR pipeline behaviour runs validation automatically before every handler.
+
+**Tech:** .NET 10, ASP.NET Core Minimal APIs, MediatR 14, FluentValidation 12, EF Core 10, SQLite
+
+```bash
+cd VSA
+dotnet run
+```
+
+- API: `http://localhost:5173`
+- Swagger UI: `http://localhost:5173/scalar/v1`
