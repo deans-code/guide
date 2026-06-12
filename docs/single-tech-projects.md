@@ -1,4 +1,4 @@
-# Projects
+# Single-Tech Projects
 
 ## Polly — .NET 10 Minimal API
 Demonstrates common Polly v8 resilience strategies: retry (fixed + exponential backoff), circuit breaker, timeout, fallback, hedging, and combined pipelines. Includes `HttpClient` integration via `AddResilienceHandler` and `AddStandardResilienceHandler`.
@@ -6,7 +6,7 @@ Demonstrates common Polly v8 resilience strategies: retry (fixed + exponential b
 **Tech:** .NET 10, ASP.NET Core Minimal APIs, Polly v8, Microsoft.Extensions.Http.Resilience
 
 ```bash
-cd Polly
+cd src/single-tech/Polly
 dotnet run
 ```
 
@@ -21,7 +21,7 @@ Demonstrates the transactional outbox pattern using EF Core and SQLite. Placing 
 **Tech:** .NET 10, ASP.NET Core Minimal APIs, EF Core 10, SQLite
 
 ```bash
-cd Outbox
+cd src/single-tech/Outbox
 dotnet run
 ```
 
@@ -36,7 +36,7 @@ Demonstrates vertical slice architecture using MediatR and FluentValidation. Eac
 **Tech:** .NET 10, ASP.NET Core Minimal APIs, MediatR 14, FluentValidation 12, EF Core 10, SQLite
 
 ```bash
-cd VSA
+cd src/single-tech/VSA
 dotnet run
 ```
 
@@ -51,7 +51,7 @@ Demonstrates CQRS with separate read and write models. Commands mutate a normali
 **Tech:** .NET 10, ASP.NET Core Minimal APIs, MediatR 12, EF Core 10, SQLite (separate write/read databases)
 
 ```bash
-cd CQRS
+cd src/single-tech/CQRS
 dotnet run
 ```
 

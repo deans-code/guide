@@ -1,7 +1,8 @@
 # Cram
 Demo code for technologies discussed during interviewing in 2026.
 
-- [Projects](docs/projects.md) — how to run each demo
+- [Single-Tech Projects](docs/single-tech-projects.md) — how to run each single-technology demo
+- [Combined-Tech Projects](docs/combined-tech-projects.md) — how to run each multi-technology demo
 - [Use Cases](docs/use-cases.md) — when and why to use each technology
 
 ## Suggested topics to explore next
