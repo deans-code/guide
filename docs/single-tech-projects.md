@@ -1,5 +1,20 @@
 # Single-Tech Projects
 
+## Modular Monolith — .NET 10 Minimal API
+Demonstrates a modular monolith made of independently deployable-looking modules within a single host. `Catalog` and `Ordering` are separate class library projects, each owning its own SQLite database and internal types (`internal` DbContexts, entities, feature handlers). The only way `Ordering` can read or update catalog data is through `IProductCatalog` — a public contract exposed by `Catalog` — so the module boundary is enforced by the compiler, not just convention. `Api` is a thin host that wires modules up via a shared `IModule` interface.
+
+**Tech:** .NET 10, ASP.NET Core Minimal APIs, EF Core 10, SQLite (separate database per module)
+
+```bash
+cd src/single-tech/ModularMonolith/Api
+dotnet run
+```
+
+- API: `http://localhost:5288`
+- Swagger UI: `http://localhost:5288/scalar/v1`
+
+---
+
 ## Polly — .NET 10 Minimal API
 Demonstrates common Polly v8 resilience strategies: retry (fixed + exponential backoff), circuit breaker, timeout, fallback, hedging, and combined pipelines. Includes `HttpClient` integration via `AddResilienceHandler` and `AddStandardResilienceHandler`.
 

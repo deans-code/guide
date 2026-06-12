@@ -1,0 +1,29 @@
+@ModularMonolithDemo_HostAddress = http://localhost:5288
+
+### Create a product (Catalog module)
+POST {{ModularMonolithDemo_HostAddress}}/catalog/products
+Content-Type: application/json
+
+{
+  "name": "Mechanical Keyboard",
+  "price": 89.99,
+  "stockQuantity": 10
+}
+
+### List products (Catalog module)
+GET {{ModularMonolithDemo_HostAddress}}/catalog/products
+Accept: application/json
+
+### Place an order (Ordering module — reserves stock via Catalog's IProductCatalog contract)
+POST {{ModularMonolithDemo_HostAddress}}/orders
+Content-Type: application/json
+
+{
+  "lines": [
+    { "productId": "00000000-0000-0000-0000-000000000000", "quantity": 1 }
+  ]
+}
+
+### List orders (Ordering module)
+GET {{ModularMonolithDemo_HostAddress}}/orders
+Accept: application/json
