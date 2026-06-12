@@ -35,6 +35,8 @@ Demo code for technologies discussed during interviewing in 2026.
 - [ ] Micro-frontends — composing a UI from independently deployed frontend apps (module federation, web components, or server-side composition)
 
 **Combined-tech demo ideas**
-- [ ] VSA + CQRS + Domain Services + Microservices + Docker — split a VSA/CQRS solution into containerized, independently deployable services, each owning a bounded context
-- [ ] VSA + Caching — applying ASP.NET Core output/response caching to read-heavy vertical slices
-- [ ] .NET Aspire + VSA — orchestrating a VSA solution's dependencies (databases, caches, message brokers) with Aspire's app host and dashboard
+- [ ] VSA + CQRS — organise vertical slices around commands and queries, making the read/write split explicit at the file level
+- [ ] CQRS + Domain Services — extract cross-aggregate business logic into domain services invoked from command handlers
+- [ ] Microservices + Docker — split a bounded context into a containerized service with its own database
+- [ ] VSA + Caching — apply ASP.NET Core output/response caching to read-heavy vertical slices
+- [ ] .NET Aspire + VSA — orchestrate a VSA solution's dependencies (databases, caches, message brokers) with Aspire's app host and dashboard
