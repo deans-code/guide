@@ -42,7 +42,6 @@ Each demo has its own README with setup instructions and use cases.
 - [ ] Minimal APIs — endpoint filters, output caching, typed results, route groups
 
 **Distributed**
-- [ ] Saga Pattern — coordinating multi-step distributed transactions without 2PC (choreography vs orchestration)
 - [ ] MassTransit — message bus abstraction over RabbitMQ / Azure Service Bus; includes saga support and the outbox pattern built-in
 - [ ] Dapr — sidecar runtime providing service invocation, state stores, pub/sub, and bindings without SDK lock-in
 

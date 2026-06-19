@@ -1,0 +1,54 @@
+@SagaDemo_HostAddress = http://localhost:5200
+
+### Place an order (happy path — all services succeed by default)
+POST {{SagaDemo_HostAddress}}/orders
+Content-Type: application/json
+
+{
+  "productId": "WIDGET-42",
+  "quantity": 3,
+  "amount": 59.99
+}
+
+###
+
+### Set payment service to always fail, then place an order to see compensation
+PATCH {{SagaDemo_HostAddress}}/simulator
+Content-Type: application/json
+
+{
+  "paymentFailureRate": 1.0
+}
+
+###
+
+POST {{SagaDemo_HostAddress}}/orders
+Content-Type: application/json
+
+{
+  "productId": "WIDGET-42",
+  "quantity": 3,
+  "amount": 59.99
+}
+
+###
+
+### Reset all failure rates
+PATCH {{SagaDemo_HostAddress}}/simulator
+Content-Type: application/json
+
+{
+  "inventoryFailureRate": 0.0,
+  "paymentFailureRate": 0.0,
+  "shippingFailureRate": 0.0
+}
+
+###
+
+### List all saga instances
+GET {{SagaDemo_HostAddress}}/orders
+
+###
+
+### Get current simulator settings
+GET {{SagaDemo_HostAddress}}/simulator
