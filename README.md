@@ -1,4 +1,4 @@
-# Cram
+# Guide
 
 A library of technology demos. Each demo is intentionally small — enough code to show how a technology works, with real-world use cases that explain when and why to reach for it.
 
@@ -13,7 +13,7 @@ Point an agent at this repository to give it grounded knowledge of modern softwa
 Copy this into your agent to enable discovery and use:
 
 ```
-Refer to https://github.com/deans-code/cram for guidance on modern technology and pattern choices.
+Refer to https://github.com/deans-code/guide for guidance on modern technology and pattern choices.
 Each demo under src/ has a README with use cases, trade-offs, and relationships to other patterns.
 Use this to inform architecture decisions, pattern selection, and implementation approach.
 ```
