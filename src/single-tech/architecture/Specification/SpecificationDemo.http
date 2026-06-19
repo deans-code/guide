@@ -1,0 +1,25 @@
+@SpecificationDemo_HostAddress = http://localhost:5203
+
+### 1. All active products (ActiveSpecification)
+GET {{SpecificationDemo_HostAddress}}/products
+
+### 2. Electronics only (ActiveSpecification AND CategorySpecification)
+GET {{SpecificationDemo_HostAddress}}/products?category=Electronics
+
+### 3. Books under £45 (ActiveSpecification AND CategorySpecification AND PriceRangeSpecification)
+GET {{SpecificationDemo_HostAddress}}/products?category=Books&maxPrice=45
+
+### 4. In-stock items across all categories (ActiveSpecification AND InStockSpecification)
+GET {{SpecificationDemo_HostAddress}}/products?inStock=true
+
+### 5. Featured in-stock items (all three specs composed)
+GET {{SpecificationDemo_HostAddress}}/products?inStock=true&featured=true
+
+### 6. Pre-composed: featured deals — Featured AND InStock AND Price <= £50
+GET {{SpecificationDemo_HostAddress}}/products/featured-deals
+
+### 7. Pre-composed: clearance — Active AND InStock AND NOT Featured AND Price <= £30
+GET {{SpecificationDemo_HostAddress}}/products/clearance
+
+### 8. Single product by id
+GET {{SpecificationDemo_HostAddress}}/products/1

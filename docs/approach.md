@@ -42,6 +42,12 @@ Auditing is a requirement. You need to know not just what the current state is, 
 
 ---
 
+**The same filter logic appears in multiple places, or a repository method accumulates optional parameters for every possible combination.**
+Query conditions start as simple `Where` clauses but get duplicated across endpoints and diverge over time. A "featured and in-stock" rule appears in the catalogue, the promotional API, and the admin view — each slightly different.
+→ [Specification Pattern](../src/single-tech/architecture/Specification/README.md)
+
+---
+
 **Downstream calls fail, and those failures propagate into your API.**
 External services are unreliable. Timeouts hang threads. A single slow dependency brings down unrelated features.
 → [Polly](../src/single-tech/resilience/Polly/README.md)

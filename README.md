@@ -19,7 +19,7 @@ A library of technology demos. Each demo is intentionally small — enough code 
 - [ ] Domain-Driven Design
 - [ ] Domain Services
 - [ ] Result Pattern
-- [ ] Specification Pattern
+- [x] Specification Pattern
 - [ ] API Versioning
 - [ ] Minimal APIs
 - [ ] gRPC
