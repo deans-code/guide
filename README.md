@@ -18,7 +18,7 @@ A library of technology demos. Each demo is intentionally small — enough code 
 - [ ] Clean Architecture
 - [ ] Domain-Driven Design
 - [ ] Domain Services
-- [ ] Result Pattern
+- [x] Result Pattern
 - [x] Specification Pattern
 - [ ] API Versioning
 - [ ] Minimal APIs

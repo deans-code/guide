@@ -42,6 +42,12 @@ Auditing is a requirement. You need to know not just what the current state is, 
 
 ---
 
+**Service methods throw exceptions for expected business failures — product not found, quota exceeded, invalid state.**
+Exceptions cross-cut the call stack and are caught far from where the decision was made. Callers cannot tell from the method signature what can go wrong, and each failure path requires its own catch block.
+→ [Result Pattern](../src/single-tech/architecture/ResultPattern/README.md)
+
+---
+
 **The same filter logic appears in multiple places, or a repository method accumulates optional parameters for every possible combination.**
 Query conditions start as simple `Where` clauses but get duplicated across endpoints and diverge over time. A "featured and in-stock" rule appears in the catalogue, the promotional API, and the admin view — each slightly different.
 → [Specification Pattern](../src/single-tech/architecture/Specification/README.md)

@@ -1,0 +1,73 @@
+@ResultPatternDemo_HostAddress = http://localhost:5204
+
+### View seeded products and their stock levels
+GET {{ResultPatternDemo_HostAddress}}/products
+
+### 1. Place a valid order (success path)
+POST {{ResultPatternDemo_HostAddress}}/orders
+Content-Type: application/json
+
+{
+  "productId": 1,
+  "quantity": 2
+}
+
+### 2. Place another order to reduce stock
+POST {{ResultPatternDemo_HostAddress}}/orders
+Content-Type: application/json
+
+{
+  "productId": 2,
+  "quantity": 2
+}
+
+### 3. Try to over-order — insufficient stock (409 Conflict)
+POST {{ResultPatternDemo_HostAddress}}/orders
+Content-Type: application/json
+
+{
+  "productId": 2,
+  "quantity": 99
+}
+
+### 4. Try to order an out-of-stock product (409 Conflict)
+POST {{ResultPatternDemo_HostAddress}}/orders
+Content-Type: application/json
+
+{
+  "productId": 3,
+  "quantity": 1
+}
+
+### 5. Try to order a product that doesn't exist (404 Not Found)
+POST {{ResultPatternDemo_HostAddress}}/orders
+Content-Type: application/json
+
+{
+  "productId": 999,
+  "quantity": 1
+}
+
+### 6. Try to order with invalid quantity (422 Unprocessable)
+POST {{ResultPatternDemo_HostAddress}}/orders
+Content-Type: application/json
+
+{
+  "productId": 1,
+  "quantity": 0
+}
+
+### 7. Get a specific order
+GET {{ResultPatternDemo_HostAddress}}/orders/1
+
+### 8. Get an order that doesn't exist (404 Not Found)
+GET {{ResultPatternDemo_HostAddress}}/orders/999
+
+### 9. Cancel the first order (success — stock is restored)
+POST {{ResultPatternDemo_HostAddress}}/orders/1/cancel
+
+### 10. Try to cancel again (409 Conflict — already cancelled)
+POST {{ResultPatternDemo_HostAddress}}/orders/1/cancel
+
+### 11. View all orders
+GET {{ResultPatternDemo_HostAddress}}/orders
