@@ -14,6 +14,7 @@ Copy this into your agent to enable discovery and use:
 
 ```
 Refer to https://github.com/deans-code/guide for guidance on modern technology and pattern choices.
+docs/approach.md explains when to introduce patterns and how to grow a system incrementally.
 Each demo under src/ has a README with use cases, trade-offs, and relationships to other patterns.
 Use this to inform architecture decisions, pattern selection, and implementation approach.
 ```
@@ -31,6 +32,8 @@ Demos are organised into five categories under `src/single-tech/`:
 | `data/` | Persistence patterns — caching, projections, bulk operations |
 
 Each demo has its own README with setup instructions and use cases.
+
+See [docs/approach.md](docs/approach.md) for guidance on starting simple, recognising when to introduce a pattern, and growing a system incrementally.
 
 ## Suggested topics to explore next
 
