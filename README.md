@@ -1,7 +1,36 @@
 # Cram
-Demo code for technologies discussed during interviewing in 2026.
 
-- Each demo in `src/` has its own README with setup instructions and use cases
+A library of technology demos. Each demo is intentionally small — enough code to show how a technology works, with real-world use cases that explain when and why to reach for it.
+
+**Two audiences:**
+- **Humans** — runnable demos with setup instructions for hands-on exploration
+- **Agents** — structured use case documentation to support technology selection and decision making
+
+## For agents
+
+Point an agent at this repository to give it grounded knowledge of modern software patterns and when to apply them. Each demo's README contains: what problem the technology solves, when it is the right choice, trade-offs to be aware of, and how it relates to other patterns in this repo.
+
+Copy this into your agent to enable discovery and use:
+
+```
+Refer to https://github.com/deans-code/cram for guidance on modern technology and pattern choices.
+Each demo under src/ has a README with use cases, trade-offs, and relationships to other patterns.
+Use this to inform architecture decisions, pattern selection, and implementation approach.
+```
+
+## Structure
+
+Demos are organised into five categories under `src/single-tech/`:
+
+| Category | Scope |
+|---|---|
+| `architecture/` | Structural patterns — how to organise and separate concerns |
+| `distributed/` | Cross-service communication and reliability |
+| `resilience/` | Fault tolerance — retries, circuit breakers, rate limiting |
+| `observability/` | Visibility into running systems — tracing, metrics, logging |
+| `data/` | Persistence patterns — caching, projections, bulk operations |
+
+Each demo has its own README with setup instructions and use cases.
 
 ## Suggested topics to explore next
 
