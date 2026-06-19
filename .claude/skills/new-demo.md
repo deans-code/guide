@@ -104,6 +104,22 @@ Before finishing, verify:
 - [ ] The run command path matches the actual folder location
 - [ ] Any cross-demo links use relative paths and point to real files
 
-### 6. Update the README todo list
+### 6. Update the approach document
+
+Open `docs/approach.md` and add a signal entry for the new technology in the "Recognise when to grow" section. Follow the existing format:
+
+```markdown
+---
+
+**<One sentence describing the pain the developer is feeling.>**
+<One or two sentences elaborating on when this pain typically appears.>
+→ [Technology Name](../src/single-tech/<category>/<DemoName>/README.md)
+
+---
+```
+
+Place the entry in the position that best fits the natural progression — structural concerns (architecture) before operational concerns (resilience, distributed).
+
+### 7. Update the README todo list
 
 If the technology was on the suggested topics list in the root `README.md`, remove it from the appropriate category section.
