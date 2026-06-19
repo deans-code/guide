@@ -120,6 +120,6 @@ Open `docs/approach.md` and add a signal entry for the new technology in the "Re
 
 Place the entry in the position that best fits the natural progression — structural concerns (architecture) before operational concerns (resilience, distributed).
 
-### 7. Update the README todo list
+### 7. Update the root README scope checklist
 
-If the technology was on the suggested topics list in the root `README.md`, remove it from the appropriate category section.
+The root `README.md` has a `## :white_check_mark: Scope` section with category checklists. If the technology appears there as an unchecked item (`- [ ]`), mark it as done (`- [x]`).
