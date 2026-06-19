@@ -1,0 +1,48 @@
+@EventSourcingDemo_HostAddress = http://localhost:5201
+
+### 1. Open an account
+POST {{EventSourcingDemo_HostAddress}}/accounts
+Content-Type: application/json
+
+{
+  "owner": "Alice",
+  "initialDeposit": 1000.00
+}
+
+###
+# Copy the returned id into @accountId
+
+@accountId = paste-id-here
+
+### 2. Deposit
+POST {{EventSourcingDemo_HostAddress}}/accounts/{{accountId}}/deposits
+Content-Type: application/json
+
+{
+  "amount": 500.00,
+  "description": "Salary"
+}
+
+### 3. Withdraw
+POST {{EventSourcingDemo_HostAddress}}/accounts/{{accountId}}/withdrawals
+Content-Type: application/json
+
+{
+  "amount": 200.00,
+  "description": "Rent"
+}
+
+### 4. Get current state (rebuilt from events — no current-value columns)
+GET {{EventSourcingDemo_HostAddress}}/accounts/{{accountId}}
+
+### 5. View raw event stream — the append-only source of truth
+GET {{EventSourcingDemo_HostAddress}}/accounts/{{accountId}}/events
+
+### 6. Attempt overdraft — rejected against replayed balance
+POST {{EventSourcingDemo_HostAddress}}/accounts/{{accountId}}/withdrawals
+Content-Type: application/json
+
+{
+  "amount": 99999.00,
+  "description": "Too much"
+}

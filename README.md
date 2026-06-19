@@ -35,7 +35,6 @@ Each demo has its own README with setup instructions and use cases.
 ## Suggested topics to explore next
 
 **Architecture**
-- [ ] Event Sourcing — storing state as an immutable sequence of events rather than current values; natural extension of CQRS
 - [ ] Clean Architecture — layered structure (Domain → Application → Infrastructure → Presentation) with strict inward-only dependencies
 - [ ] Domain-Driven Design — aggregates, value objects, bounded contexts, domain events
 - [ ] Domain Services — encapsulating business logic that doesn't naturally belong to a single aggregate or entity
