@@ -1,0 +1,62 @@
+@IdempotencyDemo_HostAddress = http://localhost:5202
+
+### 1. Process a payment with an idempotency key
+POST {{IdempotencyDemo_HostAddress}}/payments
+Content-Type: application/json
+Idempotency-Key: 9f4e1a2b-3c7d-4e8f-a0b1-c2d3e4f5a6b7
+
+{
+  "customerId": "cust-001",
+  "amount": 99.99,
+  "currency": "GBP"
+}
+
+### 2. Retry the exact same request — note Idempotency-Replayed: true in response headers
+###    Payment is NOT processed again; the cached response is returned.
+POST {{IdempotencyDemo_HostAddress}}/payments
+Content-Type: application/json
+Idempotency-Key: 9f4e1a2b-3c7d-4e8f-a0b1-c2d3e4f5a6b7
+
+{
+  "customerId": "cust-001",
+  "amount": 99.99,
+  "currency": "GBP"
+}
+
+### 3. Same key, different body — should return 422
+POST {{IdempotencyDemo_HostAddress}}/payments
+Content-Type: application/json
+Idempotency-Key: 9f4e1a2b-3c7d-4e8f-a0b1-c2d3e4f5a6b7
+
+{
+  "customerId": "cust-001",
+  "amount": 200.00,
+  "currency": "GBP"
+}
+
+### 4. New key — processes a fresh payment
+POST {{IdempotencyDemo_HostAddress}}/payments
+Content-Type: application/json
+Idempotency-Key: a1b2c3d4-e5f6-7890-abcd-ef1234567890
+
+{
+  "customerId": "cust-002",
+  "amount": 49.99,
+  "currency": "GBP"
+}
+
+### 5. No idempotency key — processed but not cached
+POST {{IdempotencyDemo_HostAddress}}/payments
+Content-Type: application/json
+
+{
+  "customerId": "cust-003",
+  "amount": 9.99,
+  "currency": "GBP"
+}
+
+### 6. List all payments — only unique payments appear
+GET {{IdempotencyDemo_HostAddress}}/payments
+
+### 7. Inspect stored idempotency keys
+GET {{IdempotencyDemo_HostAddress}}/idempotency-keys

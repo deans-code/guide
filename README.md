@@ -52,7 +52,6 @@ Each demo has its own README with setup instructions and use cases.
 
 **Resilience**
 - [ ] Rate Limiting — ASP.NET Core built-in middleware (`AddRateLimiter`), fixed/sliding/token-bucket/concurrency limiters
-- [ ] Idempotency — handling duplicate requests safely using idempotency keys; critical for retryable APIs
 - [ ] Background Jobs — Hangfire or Quartz.NET for reliable scheduled and recurring work
 - [ ] Feature Flags — `Microsoft.FeatureManagement` for gradual rollouts and kill switches
 - [ ] Bulkhead Pattern — isolating failures by capping concurrent calls per dependency to prevent cascade
