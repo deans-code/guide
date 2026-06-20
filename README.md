@@ -24,8 +24,9 @@ A library of technology demos. Each demo is intentionally small — enough code 
 - [x] Result Pattern
 - [x] Specification Pattern
 - [ ] API Versioning
-- [ ] Minimal APIs
-- [ ] gRPC
+- [x] Minimal APIs
+- [ ] MediatR
+- [ ] Multi-Tenancy
 
 **Distributed**
 - [x] Outbox Pattern
@@ -34,12 +35,13 @@ A library of technology demos. Each demo is intentionally small — enough code 
 - [ ] Dapr
 - [ ] SignalR
 - [x] Inbox Pattern
+- [ ] RabbitMQ / Kafka
 
 **Resilience**
 - [x] Polly
 - [x] Idempotency
 - [ ] Rate Limiting
-- [ ] Background Jobs
+- [ ] Background Jobs (Hangfire / Quartz.NET)
 - [ ] Feature Flags
 - [ ] Bulkhead Pattern
 
@@ -53,6 +55,19 @@ A library of technology demos. Each demo is intentionally small — enough code 
 - [ ] Dapper
 - [ ] Redis
 - [ ] Testcontainers
+
+**Security**
+- [ ] Authentication & Authorization (JWT / OAuth2)
+- [ ] CORS
+- [ ] Data Protection / Encryption
+
+**APIs**
+- [ ] GraphQL
+- [ ] gRPC
+
+**Cloud / DevOps**
+- [ ] Docker
+- [ ] CI/CD (GitHub Actions)
 
 ## :telescope: Future Gazing
 
@@ -94,7 +109,7 @@ Each demo is self-contained. See individual README files for run instructions.
 
 ## :zap: Features
 
-Demos are organised into five categories under `src/single-tech/`:
+Demos are organised into eight categories under `src/single-tech/`:
 
 | Category | Scope |
 |---|---|
@@ -103,6 +118,9 @@ Demos are organised into five categories under `src/single-tech/`:
 | `resilience/` | Fault tolerance — retries, circuit breakers, rate limiting |
 | `observability/` | Visibility into running systems — tracing, metrics, logging |
 | `data/` | Persistence patterns — caching, projections, bulk operations |
+| `security/` | Authentication, authorization, and data protection |
+| `apis/` | Alternative API paradigms — GraphQL, gRPC |
+| `cloud-devops/` | Containerisation and CI/CD pipelines |
 
 Each demo has its own README with setup instructions, use cases, trade-offs, and relationships to other patterns.
 
