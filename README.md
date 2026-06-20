@@ -8,6 +8,9 @@ A library of technology demos. Each demo is intentionally small — enough code 
 - **Humans** — runnable demos with setup instructions for hands-on exploration
 - **Agents** — structured use case documentation to support technology selection and decision making
 
+> [!WARNING]
+> This is an experimental repository. Work is underway to evaluate the value of using this resource for guiding agents. Its content will need adversarial review across multiple models to strengthen its accuracy and usefulness — treat all guidance as a starting point, not ground truth.
+
 ## :white_check_mark: Scope
 
 **Architecture**
