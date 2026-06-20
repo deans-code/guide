@@ -66,6 +66,12 @@ If either step fails independently, the system ends up in an inconsistent state.
 
 ---
 
+**The broker delivers the same message twice and your consumer processes it twice.**
+At-least-once delivery is the default guarantee for most message brokers. A retry after a timeout can cause double charges, duplicate fulfilments, or repeated notifications.
+→ [Inbox Pattern](../src/single-tech/distributed/Inbox/README.md)
+
+---
+
 **A multi-step operation must either complete fully or cleanly undo.**
 You call multiple services in sequence and a mid-flow failure leaves things in a partially-applied state with no automatic recovery.
 → [Saga Pattern](../src/single-tech/distributed/Saga/README.md)

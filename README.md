@@ -33,7 +33,7 @@ A library of technology demos. Each demo is intentionally small — enough code 
 - [ ] MassTransit
 - [ ] Dapr
 - [ ] SignalR
-- [ ] Inbox Pattern
+- [x] Inbox Pattern
 
 **Resilience**
 - [x] Polly
