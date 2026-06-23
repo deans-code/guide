@@ -10,7 +10,7 @@ Demonstrates vertical slice architecture using MediatR and FluentValidation. Eac
 ## Run
 
 ```bash
-cd src/single-tech/architecture/VSA
+cd src/focused/architecture/VSA
 dotnet run
 ```
 

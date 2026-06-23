@@ -10,7 +10,7 @@ Demonstrates the transactional outbox pattern using EF Core and SQLite. Placing 
 ## Run
 
 ```bash
-cd src/single-tech/distributed/Outbox
+cd src/focused/distributed/Outbox
 dotnet run
 ```
 

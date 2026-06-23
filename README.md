@@ -123,7 +123,7 @@ Each demo is self-contained. See individual README files for run instructions.
 
 ## :zap: Features
 
-Demos are organised into eight categories under `src/single-tech/`:
+Demos are organised into eight categories under `src/focused/`:
 
 | Category | Scope |
 |---|---|

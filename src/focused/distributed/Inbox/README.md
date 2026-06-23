@@ -10,7 +10,7 @@ Demonstrates the transactional inbox pattern using EF Core and SQLite. When a me
 ## Run
 
 ```bash
-cd src/single-tech/distributed/Inbox
+cd src/focused/distributed/Inbox
 dotnet run
 ```
 

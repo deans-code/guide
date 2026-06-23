@@ -10,7 +10,7 @@ Demonstrates common Polly v8 resilience strategies: retry (fixed + exponential b
 ## Run
 
 ```bash
-cd src/single-tech/resilience/Polly
+cd src/focused/resilience/Polly
 dotnet run
 ```
 

@@ -10,7 +10,7 @@ Demonstrates the orchestration-based saga pattern for coordinating a multi-step 
 ## Run
 
 ```bash
-cd src/single-tech/distributed/Saga
+cd src/focused/distributed/Saga
 dotnet run
 ```
 

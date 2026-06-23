@@ -10,7 +10,7 @@ Demonstrates the Specification Pattern applied to a product catalogue. Business 
 ## Run
 
 ```bash
-cd src/single-tech/architecture/Specification
+cd src/focused/architecture/Specification
 dotnet run
 ```
 

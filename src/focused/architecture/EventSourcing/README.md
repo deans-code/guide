@@ -10,7 +10,7 @@ Demonstrates event sourcing using a bank account aggregate. State is never store
 ## Run
 
 ```bash
-cd src/single-tech/architecture/EventSourcing
+cd src/focused/architecture/EventSourcing
 dotnet run
 ```
 

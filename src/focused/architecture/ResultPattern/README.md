@@ -9,7 +9,7 @@ Demonstrates the Result Pattern using the `ErrorOr` library on an order placemen
 ## Run
 
 ```bash
-cd src/single-tech/architecture/ResultPattern
+cd src/focused/architecture/ResultPattern
 dotnet run
 ```
 

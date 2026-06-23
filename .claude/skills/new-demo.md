@@ -1,10 +1,10 @@
 # New Demo
 
-Create a new single-tech demo project in this repository, following the conventions established by existing demos.
+Create a new focused demo project in this repository, following the conventions established by existing demos.
 
 ## Categories
 
-The five defined categories and their folder paths under `src/single-tech/`:
+The five defined categories and their folder paths under `src/focused/`:
 
 | Category | Folder | Scope |
 |---|---|---|
@@ -34,7 +34,7 @@ Only list a secondary category if the demo genuinely demonstrates or depends on 
 
 ### 3. Create the project
 
-Create the .NET project in `src/single-tech/<primary-category>/<DemoName>/`. Follow the conventions of existing demos:
+Create the .NET project in `src/focused/<primary-category>/<DemoName>/`. Follow the conventions of existing demos:
 
 - Use .NET 10 as the foundation
 - Use ASP.NET Core Minimal APIs by default — they keep the host thin and let the technology under demonstration stay in focus. Use a different hosting model (e.g. Worker Service, console app, MVC) only if it is more appropriate for the technology being demonstrated
@@ -59,7 +59,7 @@ Create `README.md` in the demo folder. Match this exact format — no deviations
 ## Run
 
 ```bash
-cd src/single-tech/<category>/<DemoName>
+cd src/focused/<category>/<DemoName>
 dotnet run
 ```
 
@@ -113,7 +113,7 @@ Open `docs/approach.md` and add a signal entry for the new technology in the "Re
 
 **<One sentence describing the pain the developer is feeling.>**
 <One or two sentences elaborating on when this pain typically appears.>
-→ [Technology Name](../src/single-tech/<category>/<DemoName>/README.md)
+→ [Technology Name](../src/focused/<category>/<DemoName>/README.md)
 
 ---
 ```

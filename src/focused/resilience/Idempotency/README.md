@@ -10,7 +10,7 @@ Demonstrates idempotent API design using idempotency keys on a payment endpoint.
 ## Run
 
 ```bash
-cd src/single-tech/resilience/Idempotency
+cd src/focused/resilience/Idempotency
 dotnet run
 ```
 

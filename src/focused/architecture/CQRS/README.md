@@ -10,7 +10,7 @@ Demonstrates CQRS with separate read and write models. Commands mutate a normali
 ## Run
 
 ```bash
-cd src/single-tech/architecture/CQRS
+cd src/focused/architecture/CQRS
 dotnet run
 ```
 

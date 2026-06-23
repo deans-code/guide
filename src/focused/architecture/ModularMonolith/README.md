@@ -10,7 +10,7 @@ Demonstrates a modular monolith made of independently deployable-looking modules
 ## Run
 
 ```bash
-cd src/single-tech/architecture/ModularMonolith/Api
+cd src/focused/architecture/ModularMonolith/Api
 dotnet run
 ```
 

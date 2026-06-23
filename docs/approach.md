@@ -20,67 +20,67 @@ Patterns earn their place when you feel a specific pain. The signals below map t
 
 **Features are hard to navigate — changing one thing touches too many files.**
 You have layers (controllers, services, repositories) that cut across features rather than containing them.
-→ [Vertical Slice Architecture](../src/single-tech/architecture/VSA/README.md)
+→ [Vertical Slice Architecture](../src/focused/architecture/VSA/README.md)
 
 ---
 
 **Different parts of the system evolve at different rates, or teams step on each other.**
 Some modules change frequently; others are stable. Shared databases create hidden coupling.
-→ [Modular Monolith](../src/single-tech/architecture/ModularMonolith/README.md)
+→ [Modular Monolith](../src/focused/architecture/ModularMonolith/README.md)
 
 ---
 
 **Reads and writes are pulling in different directions.**
 Queries need denormalised or aggregated data that does not match the write model. Read load significantly outweighs write load.
-→ [CQRS](../src/single-tech/architecture/CQRS/README.md)
+→ [CQRS](../src/focused/architecture/CQRS/README.md)
 
 ---
 
 **You need a full history, not just current state.**
 Auditing is a requirement. You need to know not just what the current state is, but how and when it got there. State must be reconstructable at any point in time.
-→ [Event Sourcing](../src/single-tech/architecture/EventSourcing/README.md)
+→ [Event Sourcing](../src/focused/architecture/EventSourcing/README.md)
 
 ---
 
 **Service methods throw exceptions for expected business failures — product not found, quota exceeded, invalid state.**
 Exceptions cross-cut the call stack and are caught far from where the decision was made. Callers cannot tell from the method signature what can go wrong, and each failure path requires its own catch block.
-→ [Result Pattern](../src/single-tech/architecture/ResultPattern/README.md)
+→ [Result Pattern](../src/focused/architecture/ResultPattern/README.md)
 
 ---
 
 **The same filter logic appears in multiple places, or a repository method accumulates optional parameters for every possible combination.**
 Query conditions start as simple `Where` clauses but get duplicated across endpoints and diverge over time. A "featured and in-stock" rule appears in the catalogue, the promotional API, and the admin view — each slightly different.
-→ [Specification Pattern](../src/single-tech/architecture/Specification/README.md)
+→ [Specification Pattern](../src/focused/architecture/Specification/README.md)
 
 ---
 
 **Downstream calls fail, and those failures propagate into your API.**
 External services are unreliable. Timeouts hang threads. A single slow dependency brings down unrelated features.
-→ [Polly](../src/single-tech/resilience/Polly/README.md)
+→ [Polly](../src/focused/resilience/Polly/README.md)
 
 ---
 
 **You write to a database and publish a message in the same operation.**
 If either step fails independently, the system ends up in an inconsistent state. You cannot use a distributed transaction.
-→ [Outbox Pattern](../src/single-tech/distributed/Outbox/README.md)
+→ [Outbox Pattern](../src/focused/distributed/Outbox/README.md)
 
 ---
 
 **The broker delivers the same message twice and your consumer processes it twice.**
 At-least-once delivery is the default guarantee for most message brokers. A retry after a timeout can cause double charges, duplicate fulfilments, or repeated notifications.
-→ [Inbox Pattern](../src/single-tech/distributed/Inbox/README.md)
+→ [Inbox Pattern](../src/focused/distributed/Inbox/README.md)
 
 ---
 
 **A multi-step operation must either complete fully or cleanly undo.**
 You call multiple services in sequence and a mid-flow failure leaves things in a partially-applied state with no automatic recovery.
-→ [Saga Pattern](../src/single-tech/distributed/Saga/README.md)
+→ [Saga Pattern](../src/focused/distributed/Saga/README.md)
 
 ---
 
 **Clients retry on failure and duplicates are appearing.**
 A timeout does not mean the operation failed — the client cannot tell. Retrying causes double charges, duplicate orders, or repeated notifications.
-→ [Idempotency](../src/single-tech/resilience/Idempotency/README.md)
+→ [Idempotency](../src/focused/resilience/Idempotency/README.md)
 
 ---
 
