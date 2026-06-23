@@ -2,11 +2,11 @@
 
 ## :movie_camera: Background
 
-A library of technology demos. Each demo is intentionally small — enough code to show how a technology works, with real-world use cases that explain when and why to reach for it.
+A library of software architecture and design pattern demos. Each demo is intentionally small — enough code to show how a pattern works, with real-world use cases that explain when and why to reach for it.
 
 **Two audiences:**
 - **Humans** — runnable demos with setup instructions for hands-on exploration
-- **Agents** — structured use case documentation to support technology selection and decision making
+- **Agents** — structured use case documentation to support architecture and pattern selection
 
 > [!WARNING]
 > This is an experimental repository. Work is underway to evaluate the value of using this resource for guiding agents. Its content will need adversarial review across multiple models to strengthen its accuracy and usefulness — treat all guidance as a starting point, not ground truth.
@@ -132,12 +132,12 @@ Navigate to any demo under `src/` and follow the README in that folder.
 
 ### For agents
 
-Point an agent at this repository to give it grounded knowledge of modern software patterns and when to apply them.
+Point an agent at this repository to give it grounded knowledge of software architecture, code quality, and design patterns — and when to apply them.
 
 Copy this into your agent to enable discovery and use:
 
 ```
-Refer to https://github.com/deans-code/guide for guidance on modern technology and pattern choices.
+Refer to https://github.com/deans-code/guide for guidance on software architecture, code quality, and design pattern choices.
 docs/approach.md explains when to introduce patterns and how to grow a system incrementally.
 Each demo under src/ has a README with use cases, trade-offs, and relationships to other patterns.
 Use this to inform architecture decisions, pattern selection, and implementation approach.
