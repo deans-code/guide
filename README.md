@@ -102,7 +102,7 @@ No known defects.
 
 ## :crystal_ball: Use of AI
 
-[Claude Code](https://claude.com/product/claude-code) was used to assist in the development and documentation of this library.
+[Claude Code](https://claude.com/product/claude-code) and [opencode](https://opencode.ai) were used to assist in the development and documentation of this library.
 
 ## :rocket: Getting Started
 
