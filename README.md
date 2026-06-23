@@ -69,6 +69,20 @@ A library of software architecture and design pattern demos. Each demo is intent
 - [ ] Docker
 - [ ] CI/CD (GitHub Actions)
 
+**GoF Patterns**
+- [ ] Strategy
+- [ ] Decorator
+- [ ] Observer
+- [ ] Command
+- [ ] Factory Method
+- [ ] Builder
+- [ ] Adapter
+- [ ] Facade
+- [ ] Proxy
+- [ ] Chain of Responsibility
+- [ ] Template Method
+- [ ] Composite
+
 ## :telescope: Future Gazing
 
 - [ ] VSA + CQRS — organise vertical slices around commands and queries, making the read/write split explicit at the file level
@@ -121,6 +135,7 @@ Demos are organised into eight categories under `src/single-tech/`:
 | `security/` | Authentication, authorization, and data protection |
 | `apis/` | Alternative API paradigms — GraphQL, gRPC |
 | `cloud-devops/` | Containerisation and CI/CD pipelines |
+| `gof-patterns/` | Gang of Four design patterns — creational, structural, and behavioural |
 
 Each demo has its own README with setup instructions, use cases, trade-offs, and relationships to other patterns.
 
