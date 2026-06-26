@@ -55,3 +55,7 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Architecture reports (generated output — track the directory, not its content)
+reports/*
+!reports/.gitkeep
