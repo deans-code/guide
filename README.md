@@ -166,6 +166,22 @@ The skill works in phases:
 5. **Recommendations** — a structured summary with risks and an evolutionary path
 6. **Export** — optionally writes a report to `reports/YYYY-MM-DD-HHMM-<title>.md`
 
+#### `/new-demo` — Demo Scaffolder
+
+Scaffolds a new pattern demo in the correct location, following all repository conventions.
+
+```
+/new-demo
+```
+
+The skill handles:
+
+1. **Category assignment** — assigns a primary category (`architecture/`, `distributed/`, `resilience/`, `observability/`, `data/`) and any relevant secondary categories
+2. **Project creation** — creates the .NET 10 project under `src/focused/<category>/<DemoName>/` with ASP.NET Core Minimal APIs, EF Core + SQLite, and Scalar
+3. **README generation** — writes the demo README in the standard format (headings, bold labels, use cases, trade-offs, cross-demo links)
+4. **Approach doc update** — adds a signal entry to `docs/approach.md` so agents know when to reach for the pattern
+5. **Scope checklist** — marks the item as done in the root README if it appears there
+
 ### For agents
 
 Point an agent at this repository to give it grounded knowledge of software architecture, code quality, and design patterns — and when to apply them.
