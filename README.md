@@ -145,6 +145,27 @@ Each demo has its own README with setup instructions, use cases, trade-offs, and
 
 Navigate to any demo under `src/` and follow the README in that folder.
 
+### Claude Code skills
+
+The repository ships a skill for use with [Claude Code](https://claude.com/product/claude-code).
+
+#### `/architect` — Architecture Advisor
+
+An interactive session that guides you from problem description to a concrete architectural recommendation.
+
+```
+/architect
+```
+
+The skill works in phases:
+
+1. **Problem discovery** — asks about the workload, scale, team, and constraints
+2. **Architectural style** — presents 2–4 candidate styles (monolith, microservices, event-driven, etc.) with pros, cons, and fit reasoning; you pick one
+3. **Design patterns** — recommends structural, behavioural, resilience, and observability patterns for the chosen style; you confirm the shortlist
+4. **Infrastructure** — concise infra and deployment considerations
+5. **Recommendations** — a structured summary with risks and an evolutionary path
+6. **Export** — optionally writes a report to `reports/YYYY-MM-DD-HHMM-<title>.md`
+
 ### For agents
 
 Point an agent at this repository to give it grounded knowledge of software architecture, code quality, and design patterns — and when to apply them.
