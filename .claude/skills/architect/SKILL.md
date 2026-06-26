@@ -1,3 +1,7 @@
+---
+description: Guide the user through identifying an architectural approach, design patterns, and architecture patterns for a specific solution. Use when the user wants architecture advice, wants to plan a system, or asks about architectural styles and patterns.
+---
+
 # Architecture Advisor
 
 Guide the user through identifying an architectural approach, design patterns, and architecture patterns for a specific solution. Work interactively — ask questions, present options with trade-offs, and let the user decide at each step. Finish by producing a structured recommendation report and offering to export it.

@@ -1,3 +1,8 @@
+---
+description: Create a new focused demo project in this repository following established conventions. Use when adding a new technology demo.
+disable-model-invocation: true
+---
+
 # New Demo
 
 Create a new focused demo project in this repository, following the conventions established by existing demos.
