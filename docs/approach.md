@@ -78,6 +78,12 @@ You call multiple services in sequence and a mid-flow failure leaves things in a
 
 ---
 
+**Every service is hand-rolling its own retry logic, broker client, and state store SDK.**
+A polyglot or multi-team environment means each service reinvents connection handling, retries, and serialization for the same class of infrastructure — and swapping a broker or store means a code change everywhere it's used.
+→ [Dapr](../src/focused/distributed/Dapr/README.md)
+
+---
+
 **Clients retry on failure and duplicates are appearing.**
 A timeout does not mean the operation failed — the client cannot tell. Retrying causes double charges, duplicate orders, or repeated notifications.
 → [Idempotency](../src/focused/resilience/Idempotency/README.md)

@@ -1,0 +1,22 @@
+@DaprDemo_HostAddress = http://localhost:5210
+
+POST {{DaprDemo_HostAddress}}/orders
+Content-Type: application/json
+
+{
+  "product": "Widget",
+  "quantity": 3
+}
+
+###
+
+# Replace {orderId} with the id returned by the POST above
+GET {{DaprDemo_HostAddress}}/orders/{orderId}
+Accept: application/json
+
+###
+
+GET {{DaprDemo_HostAddress}}/notifications/{orderId}
+Accept: application/json
+
+###

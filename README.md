@@ -32,7 +32,7 @@ A library of software architecture and design pattern demos. Each demo is intent
 - [x] Outbox Pattern
 - [x] Saga Pattern
 - [ ] MassTransit
-- [ ] Dapr
+- [x] Dapr
 - [ ] SignalR
 - [x] Inbox Pattern
 - [ ] RabbitMQ / Kafka
