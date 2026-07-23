@@ -37,13 +37,15 @@ A library of software architecture and design pattern demos. Each demo is intent
 - [x] Inbox Pattern
 - [ ] RabbitMQ / Kafka
 - [ ] Azure Service Bus
-- [ ] DistributedLock.SqlServer / DistributedLock.Core - cross-replica coordination
+- [ ] DistributedLock.SqlServer / DistributedLock.Core
 
 **Resilience**
 - [x] Polly
 - [x] Idempotency
 - [ ] RedisRateLimiting.AspNetCore
-- [ ] Hangfire / Quartz.NET / NCrontab.Signed
+- [ ] Hangfire
+- [ ] Quartz.NET
+- [ ] NCrontab.Signed
 - [ ] Feature Flags
 - [ ] Bulkhead Pattern
 
@@ -51,65 +53,55 @@ A library of software architecture and design pattern demos. Each demo is intent
 - [ ] OpenTelemetry
 - [ ] Serilog
 - [ ] ASP.NET Core Health Checks
-- [ ] Sentry - error tracking
+- [ ] Sentry
 
 **Data**
 - [ ] EF Core
 - [ ] Dapper
 - [ ] Redis
-- [ ] Testcontainers - integration-test databases
-- [ ] Azure Storage Blobs / Azure Search / Azure Tables
+- [ ] Testcontainers
+- [ ] Azure Storage Blobs
+- [ ] Azure Search
+- [ ] Azure Tables
 
 **Security**
-- [ ] JWT / OAuth2 / Microsoft.Identity.Web / System.IdentityModel.Tokens.Jwt
+- [ ] OAuth2
 - [ ] CORS
-- [ ] Data Protection / Encryption
 - [ ] Azure Key Vault
-- [ ] Azure Key Vault Emulator - local dev
+- [ ] Azure Key Vault Emulator
 - [ ] RBAC
 
 **APIs**
 - [ ] GraphQL
 - [ ] gRPC
-- [ ] YARP - API gateway / reverse proxy
-- [ ] Scalar.AspNetCore - API documentation
-- [ ] Microsoft.AspNetCore.OpenApi / Microsoft.OpenApi
+- [ ] YARP
+- [ ] Scalar.AspNetCore
 
 **Cloud / DevOps**
 - [ ] Docker
 - [ ] GitHub Actions
-- [ ] .NET Aspire - local orchestration and cloud dashboard
-- [ ] Community Toolkit Aspire - Azure Dapr / SQL Server extensions
+- [ ] .NET Aspire
+- [ ] Aspire Community Toolkit
 - [ ] Azure Container Apps
 - [ ] Azure Container Registry
 - [ ] Azure Resource Manager
 
 **Validation**
-- [ ] FluentValidation - request/command validation
-- [ ] Ardalis.GuardClauses - defensive guards
-- [ ] JsonSchema.Net - JSON Schema validation
+- [ ] FluentValidation
+- [ ] Ardalis.GuardClauses
+- [ ] JsonSchema.Net
 
 **Testing**
-- [ ] xUnit on Microsoft.Testing.Platform
+- [ ] xUnit
 - [ ] FluentAssertions
 - [ ] NSubstitute + MockQueryable.NSubstitute
 - [ ] AutoFixture
-- [ ] TngTech.ArchUnitNET.xUnitV3 - architecture testing
-- [ ] NBomber + NBomber.Http - load/soak testing
-
-**Developer Tooling**
-- [ ] Microsoft.SqlServer.TransactSql.ScriptDom - T-SQL AST parsing
-- [ ] Microsoft.CodeAnalysis.CSharp - source analysis / generation
-- [ ] Scrutor + ServiceScan.SourceGenerator - DI assembly scanning
-- [ ] SonarAnalyzer.CSharp - code analysis
+- [ ] TngTech.ArchUnitNET.xUnitV3
+- [ ] NBomber + NBomber.Http
 
 **Integrations**
-- [ ] Stripe.net - payment processing
-- [ ] Lib.Net.Http.WebPush - VAPID-signed browser push notifications
-
-**Platform Extensibility**
-- [ ] Plugin SDK - host, scaffold, testing packages
-- [ ] Protocol - dependency-free wire contracts / DTOs / enums
+- [ ] Stripe.net
+- [ ] Lib.Net.Http.WebPush
 
 **GoF Patterns**
 - [ ] Strategy
