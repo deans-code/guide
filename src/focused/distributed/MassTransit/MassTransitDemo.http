@@ -1,0 +1,23 @@
+@MassTransitDemo_HostAddress = http://localhost:5211
+
+GET {{MassTransitDemo_HostAddress}}/orders
+Accept: application/json
+
+###
+
+POST {{MassTransitDemo_HostAddress}}/orders
+Content-Type: application/json
+
+{
+  "customerName": "Ada Lovelace",
+  "amount": 42.50
+}
+
+###
+
+GET {{MassTransitDemo_HostAddress}}/consumers/activity
+Accept: application/json
+
+###
+
+PUT {{MassTransitDemo_HostAddress}}/consumers/inventory/failures-before-success?count=2

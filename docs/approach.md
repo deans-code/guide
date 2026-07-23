@@ -84,6 +84,12 @@ A polyglot or multi-team environment means each service reinvents connection han
 
 ---
 
+**You are hand-rolling retry, redelivery, and consumer dispatch around a message broker.**
+Each service reimplements attempt-counting, backoff, and routing for the same broker client. Fan-out to multiple subscribers means duplicating the publish call or manually tracking who needs to know.
+→ [MassTransit](../src/focused/distributed/MassTransit/README.md)
+
+---
+
 **Clients retry on failure and duplicates are appearing.**
 A timeout does not mean the operation failed — the client cannot tell. Retrying causes double charges, duplicate orders, or repeated notifications.
 → [Idempotency](../src/focused/resilience/Idempotency/README.md)

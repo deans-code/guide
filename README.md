@@ -31,7 +31,7 @@ A library of software architecture and design pattern demos. Each demo is intent
 **Distributed**
 - [x] Outbox Pattern
 - [x] Saga Pattern
-- [ ] MassTransit
+- [x] MassTransit
 - [x] Dapr
 - [ ] SignalR
 - [x] Inbox Pattern
