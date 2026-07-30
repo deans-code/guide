@@ -96,6 +96,12 @@ A timeout does not mean the operation failed — the client cannot tell. Retryin
 
 ---
 
+**A request handler does slow or unreliable work inline and holds the connection open for it.**
+Sending an email, calling a flaky third-party API, or generating a report doesn't need to finish before you respond — but an in-process `Task.Run` loses the work if the process restarts or crashes mid-job.
+→ [Hangfire](../src/focused/resilience/Hangfire/README.md)
+
+---
+
 ## Expand incrementally
 
 When a signal appears, introduce the minimum change needed to address it. Do not apply multiple patterns at once unless you are solving multiple independent problems.

@@ -1,0 +1,19 @@
+@HangfireDemo_HostAddress = http://localhost:5212
+
+POST {{HangfireDemo_HostAddress}}/jobs/welcome-email/42
+Accept: application/json
+
+###
+
+POST {{HangfireDemo_HostAddress}}/jobs/reminder/42?message=Don't forget to renew&delaySeconds=30
+Accept: application/json
+
+###
+
+GET {{HangfireDemo_HostAddress}}/emails
+Accept: application/json
+
+###
+
+GET {{HangfireDemo_HostAddress}}/digests
+Accept: application/json

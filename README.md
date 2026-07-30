@@ -43,7 +43,7 @@ A library of software architecture and design pattern demos. Each demo is intent
 - [x] Polly
 - [x] Idempotency
 - [ ] RedisRateLimiting.AspNetCore
-- [ ] Hangfire
+- [x] Hangfire
 - [ ] Quartz.NET
 - [ ] NCrontab.Signed
 - [ ] Feature Flags
