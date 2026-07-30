@@ -57,7 +57,7 @@ A library of software architecture and design pattern demos. Each demo is intent
 
 **Data**
 - [ ] EF Core
-- [ ] Dapper
+- [x] Dapper
 - [ ] Redis
 - [ ] Testcontainers
 - [ ] Azure Storage Blobs

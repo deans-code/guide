@@ -1,0 +1,34 @@
+@DapperDemo_HostAddress = http://localhost:5213
+
+GET {{DapperDemo_HostAddress}}/products
+Accept: application/json
+
+###
+
+GET {{DapperDemo_HostAddress}}/orders/2
+Accept: application/json
+
+###
+
+GET {{DapperDemo_HostAddress}}/reports/top-products
+Accept: application/json
+
+###
+
+POST {{DapperDemo_HostAddress}}/products
+Content-Type: application/json
+
+{
+  "name": "Webcam",
+  "price": 59.99,
+  "stockQuantity": 30
+}
+
+###
+
+PATCH {{DapperDemo_HostAddress}}/products/1/stock
+Content-Type: application/json
+
+{
+  "delta": -5
+}

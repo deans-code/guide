@@ -36,6 +36,12 @@ Queries need denormalised or aggregated data that does not match the write model
 
 ---
 
+**A reporting or read-heavy query fights your ORM's query builder, or you've profiled it and the ORM overhead is the bottleneck.**
+Joins, aggregates, and hand-tuned SQL are naturally SQL-shaped; forcing them through LINQ and change-tracked entities adds translation overhead and obscures the query you actually want to run.
+→ [Dapper](../src/focused/data/Dapper/README.md)
+
+---
+
 **You need a full history, not just current state.**
 Auditing is a requirement. You need to know not just what the current state is, but how and when it got there. State must be reconstructable at any point in time.
 → [Event Sourcing](../src/focused/architecture/EventSourcing/README.md)
